@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : pypi-zope.interface
-Version  : 6.3
-Release  : 101
-URL      : https://files.pythonhosted.org/packages/2a/bd/a30bf6df24480017171da4f52ee527a72c7a6450c86355011e0156e71723/zope.interface-6.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/2a/bd/a30bf6df24480017171da4f52ee527a72c7a6450c86355011e0156e71723/zope.interface-6.3.tar.gz
+Version  : 6.4
+Release  : 102
+URL      : https://files.pythonhosted.org/packages/1f/41/d0bdb50947f77341e979241de26f348e538a5d0f3ddb2482bc3907a3d728/zope_interface-6.4.tar.gz
+Source0  : https://files.pythonhosted.org/packages/1f/41/d0bdb50947f77341e979241de26f348e538a5d0f3ddb2482bc3907a3d728/zope_interface-6.4.tar.gz
 Summary  : Interfaces for Python
 Group    : Development/Tools
 License  : ZPL-2.1
@@ -59,10 +59,10 @@ python3 components for the pypi-zope.interface package.
 
 
 %prep
-%setup -q -n zope.interface-6.3
-cd %{_builddir}/zope.interface-6.3
+%setup -q -n zope_interface-6.4
+cd %{_builddir}/zope_interface-6.4
 pushd ..
-cp -a zope.interface-6.3 buildavx2
+cp -a zope_interface-6.4 buildavx2
 popd
 
 %build
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1713039243
+export SOURCE_DATE_EPOCH=1715874764
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -115,7 +115,7 @@ LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-zope.interface
-cp %{_builddir}/zope.interface-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-zope.interface/a0b53f43aab58b46bf79ba756c50771c605ab4c5 || :
+cp %{_builddir}/zope_interface-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-zope.interface/a0b53f43aab58b46bf79ba756c50771c605ab4c5 || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
