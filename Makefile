@@ -1,5 +1,5 @@
 PKG_NAME := pypi-zope.interface
-URL = https://files.pythonhosted.org/packages/1f/41/d0bdb50947f77341e979241de26f348e538a5d0f3ddb2482bc3907a3d728/zope_interface-6.4.tar.gz
+URL = https://files.pythonhosted.org/packages/0d/5a/91fe2710d715a551636800e12b72c338facfa8fe67f81842fdf9d99d546c/zope.interface-6.4.post0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
