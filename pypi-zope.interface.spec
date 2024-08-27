@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : pypi-zope.interface
-Version  : 7.0.2
-Release  : 108
-URL      : https://files.pythonhosted.org/packages/77/b5/ba1c7dc2c0bbf0df8be283b027e02b995982360a63a0345fd2c2cd4c35ef/zope.interface-7.0.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/77/b5/ba1c7dc2c0bbf0df8be283b027e02b995982360a63a0345fd2c2cd4c35ef/zope.interface-7.0.2.tar.gz
+Version  : 7.0.3
+Release  : 109
+URL      : https://files.pythonhosted.org/packages/c8/83/7de03efae7fc9a4ec64301d86e29a324f32fe395022e3a5b1a79e376668e/zope.interface-7.0.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c8/83/7de03efae7fc9a4ec64301d86e29a324f32fe395022e3a5b1a79e376668e/zope.interface-7.0.3.tar.gz
 Summary  : Interfaces for Python
 Group    : Development/Tools
 License  : ZPL-2.1
@@ -59,10 +59,10 @@ python3 components for the pypi-zope.interface package.
 
 
 %prep
-%setup -q -n zope.interface-7.0.2
-cd %{_builddir}/zope.interface-7.0.2
+%setup -q -n zope.interface-7.0.3
+cd %{_builddir}/zope.interface-7.0.3
 pushd ..
-cp -a zope.interface-7.0.2 buildavx2
+cp -a zope.interface-7.0.3 buildavx2
 popd
 
 %build
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1724714527
+export SOURCE_DATE_EPOCH=1724799553
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
