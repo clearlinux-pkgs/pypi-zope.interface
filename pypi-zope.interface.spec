@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : pypi-zope.interface
-Version  : 7.1.0
-Release  : 110
-URL      : https://files.pythonhosted.org/packages/e4/1f/8bb0739aba9a8909bcfa2e12dc20443ebd5bd773b6796603f1a126211e18/zope_interface-7.1.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/e4/1f/8bb0739aba9a8909bcfa2e12dc20443ebd5bd773b6796603f1a126211e18/zope_interface-7.1.0.tar.gz
+Version  : 7.1.1
+Release  : 111
+URL      : https://files.pythonhosted.org/packages/3c/f5/1079cab32302359cc09bd1dca9656e680601e0e8af9397322ab0fe85f368/zope.interface-7.1.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/3c/f5/1079cab32302359cc09bd1dca9656e680601e0e8af9397322ab0fe85f368/zope.interface-7.1.1.tar.gz
 Summary  : Interfaces for Python
 Group    : Development/Tools
 License  : ZPL-2.1
@@ -59,10 +59,10 @@ python3 components for the pypi-zope.interface package.
 
 
 %prep
-%setup -q -n zope_interface-7.1.0
-cd %{_builddir}/zope_interface-7.1.0
+%setup -q -n zope.interface-7.1.1
+cd %{_builddir}/zope.interface-7.1.1
 pushd ..
-cp -a zope_interface-7.1.0 buildavx2
+cp -a zope.interface-7.1.1 buildavx2
 popd
 
 %build
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1728569342
+export SOURCE_DATE_EPOCH=1729722507
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -115,7 +115,7 @@ LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-zope.interface
-cp %{_builddir}/zope_interface-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-zope.interface/a0b53f43aab58b46bf79ba756c50771c605ab4c5 || :
+cp %{_builddir}/zope.interface-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-zope.interface/a0b53f43aab58b46bf79ba756c50771c605ab4c5 || :
 python3 -m installer --destdir=%{buildroot} dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
